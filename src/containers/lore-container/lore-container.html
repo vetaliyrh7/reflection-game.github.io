@@ -1,0 +1,10 @@
+<template>
+    <require from="../../components/card/card.html"></require>
+    <require from="./lore-container.css"></require>
+    <div class="main-container">
+        <div class="row flexed">
+            <card data.bind="cardData" repeat.for="cardData of cardsData"></card>
+            <div if.bind="noData"><h1>В даный момент даных нет</h1></div>
+        </div>
+    </div>
+</template>

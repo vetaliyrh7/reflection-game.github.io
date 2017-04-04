@@ -1,0 +1,50 @@
+.card {
+  border-radius: .2rem;
+}
+
+.card-title {
+  padding: 0.5rem 1rem;
+  color: black;
+  background: white;
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.card-title .date {
+  display: block;
+  margin-top: .5rem;
+  font-size: .8rem;
+}
+
+.card-title > .type-label {
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+}
+
+.card-title.news > .type-label {
+  background: #5CB85C;
+}
+
+.card-block .btn.news {
+  color: #5CB85C;
+  border-color: #5CB85C;
+}
+
+.card-block .btn.news:hover {
+  color: white;
+  background: #5CB85C;
+}
+
+.card-title.info  > .type-label {
+  background: #5bc0de;
+}
+
+.card-block .btn.info {
+  color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.card-block .btn.info:hover {
+  color: white;
+  background: #5bc0de;
+}

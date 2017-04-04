@@ -1,0 +1,13 @@
+<template class="block-flexed" bindable="data">
+  <require from="./card.css"></require>
+  <div class="card ${data.type}">
+    <h4 class="card-title ${data.type}">
+      ${data.title}
+      <span class="badge badge-default type-label">${data.typeLabel}</span>
+      <span class="date">Создано: ${data.createdAt}</span>
+    </h4>
+    <div class="card-block">
+      <p class="card-text" innerhtml.bind="data.text"></p>
+    </div>
+  </div>
+</template>

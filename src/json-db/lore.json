@@ -1,0 +1,9 @@
+[
+  {
+    "title": "История мира",
+    "text": "<div class='content-item col-lg-10 col-md-10 col-sm-10 col-xs-10'><p> <h4>Наша эра:</h4> <span class='line-through'>Когда-то давно четыре народа жили в мире</span><br><span class='important'>2020 год</span> - человечество открыло технологию чтения мыслей.<br><span class='important'>2024 год</span> - шлемы, проецирующие мысли на экран, поступили в продажу.<br><span class='important'>2031 год</span> - создание первого нанобота. <blockquote>Наноботы - роботы, размером сопоставимые с молекулой (менее 100 нм), обладающие функциями движения, обработки и передачи информации, исполнения программ. Спобобны к самовоспроизводству.</blockquote><span class='important'>2050 год</span> - модель шлема <span class='important'>Im-22</span>, позволяющая создавать материальные предметы посредством управления наноботами силой мысли, поступила в продажу. <p class='highlighted'>Im-22 - Imagination, модель №22. </p><span class='important'>2051 год</span> - конец нашей эры. </p></div><div class='content-item col-lg-10 col-md-10 col-sm-10 col-xs-10'> <p> <h4>Вторая эра:</h4> <span class='important'>805 год</span> - флотилия шутников потерпела крушение на Далеких островах.<br></p></div>",
+    "type": "info",
+    "typeLabel": "Инфа",
+    "createdAt": "3 апреля 2017"
+  }
+]
