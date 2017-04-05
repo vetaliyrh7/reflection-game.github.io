@@ -43,7 +43,6 @@ const coreBundles = {
   // these will be included in the 'aurelia' bundle (except for the above bootstrap packages)
   aurelia: [
     'aurelia-bootstrapper-webpack',
-    'aurelia-froala-editor',
     'aurelia-binding',
     'aurelia-dependency-injection',
     'aurelia-event-aggregator',
