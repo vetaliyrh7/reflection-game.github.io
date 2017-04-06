@@ -25,11 +25,11 @@ process.env.BABEL_ENV = 'webpack'
 const ENV = process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() || (process.env.NODE_ENV = 'development')
 
 // basic configuration:
-const title = 'Aurelia Navigation Skeleton'
+const title = 'Reflection'
 const baseUrl = '/'
 const rootDir = path.resolve()
 const srcDir = path.resolve('src')
-const outDir = path.resolve('dist')
+const outDir = path.resolve('public')
 
 const coreBundles = {
   bootstrap: [

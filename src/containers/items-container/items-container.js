@@ -10,12 +10,12 @@ export class ItemsContainer {
     }
 
     sendRequest() {
-        httpClient.get('./src/json-db/items.json')
-            .then(data => {
-                this.cardsData = JSON.parse(data.response);
-                if(this.cardsData.length > 0) {
-                    this.noData = false
-                }
-            });
+        // httpClient.get('./src/json-db/items.json')
+        //     .then(data => {
+        //         this.cardsData = JSON.parse(data.response);
+        //         if(this.cardsData.length > 0) {
+        //             this.noData = false
+        //         }
+        //     });
     }
 }

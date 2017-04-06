@@ -1,4 +1,5 @@
 import {HttpClient} from 'aurelia-http-client';
+import _ from "lodash";
 
 let httpClient = new HttpClient();
 
@@ -10,7 +11,7 @@ export class LoreContainer {
     }
 
     sendRequest() {
-        httpClient.get('./src/json-db/lore.json')
+        httpClient.get('/api/posts?type=lore')
             .then(data => {
                 this.cardsData = JSON.parse(data.response);
                 if(this.cardsData.length > 0) {

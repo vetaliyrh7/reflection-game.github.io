@@ -1,9 +1,16 @@
 {
-  "name": "aurelia-skeleton-navigation-webpack",
-  "version": "1.1.2",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia and webpack.",
-  "main": "dist/main.js",
+  "name": "reflection-game.github.io",
+  "version": "0.0.0",
+  "private": true,
+  "aurelia": {
+    "build": {
+      "resources": []
+    }
+  },
+  "main": "public/main.js",
   "scripts": {
+    "start:front": "au run --watch",
+    "start:backend": "nodemon ./bin/www",
     "pretest": "del-cli \"test/coverage\"",
     "test": "cross-env BABEL_ENV=node NODE_ENV=test ./node_modules/karma/bin/karma start test/karma.conf.js",
     "test:debug": "npm test -- --single-run=false --debug",
@@ -14,8 +21,8 @@
     "e2e:start-when-ready": "wait-on --timeout 120000 http-get://localhost:19876/index.html && npm run e2e:start",
     "e2e:start": "cross-env ./node_modules/.bin/protractor test/protractor.conf.js",
     "e2e:live": "npm run e2e:start -- --elementExplorer",
-    "clean": "npm cache clean && del-cli node_modules \"test/coverage\" dist",
-    "clean:dist": "del-cli dist",
+    "clean": "npm cache clean && del-cli node_modules \"test/coverage\" public",
+    "clean:public": "del-cli public",
     "preclean:install": "npm run clean",
     "clean:install": "npm install",
     "preclean:start": "npm run clean",
@@ -26,46 +33,17 @@
     "watch:test": "npm run test -- --auto-watch --no-single-run",
     "watch:prod": "npm run build:prod -- --watch",
     "build": "npm run build:dev",
-    "prebuild:dev": "npm run clean:dist",
+    "prebuild:dev": "npm run clean:public",
     "build:dev": "cross-env NODE_ENV=development npm run webpack -- --progress --profile",
-    "prebuild:prod": "npm run clean:dist",
+    "prebuild:prod": "npm run clean:public",
     "build:prod": "cross-env NODE_ENV=production npm run webpack -- --progress --profile",
     "start": "npm run server:dev",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development npm run webpack-dev-server -- --inline --progress --profile --watch",
     "server:dev:hmr": "npm run server:dev -- --hot",
-    "server:prod": "http-server dist --cors",
+    "server:prod": "http-server public --cors",
     "webpack": "cross-env BABEL_ENV=node ./node_modules/.bin/webpack",
     "webpack-dev-server": "cross-env BABEL_ENV=node ./node_modules/.bin/webpack-dev-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/aurelia/skeleton-navigation.git"
-  },
-  "keywords": [
-    "aurelia",
-    "skeleton",
-    "navigation",
-    "webpack"
-  ],
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
-  "contributors": [
-    {
-      "name": "Arjen de Blok"
-    },
-    {
-      "name": "Bazyli Brzóska <bazyli.brzoska@gmail.com> (https://invent.life)"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
-  },
-  "homepage": "https://github.com/aurelia/skeleton-navigation#readme",
-  "aurelia": {
-    "build": {
-      "resources": []
-    }
   },
   "dependencies": {
     "aurelia-bootstrapper-webpack": "^1.1.0",
@@ -88,10 +66,21 @@
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
+    "jade": "~1.11.0",
     "jquery": "^3.1.1"
   },
   "devDependencies": {
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "body-parser": "~1.17.1",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^2.0.0-rc1",
     "@easy-webpack/config-aurelia": "^2.2.2",
+    "sequelize-cli": "^2.7.0",
     "@easy-webpack/config-babel": "^4.0.0",
     "@easy-webpack/config-common-chunks-simple": "^2.0.3",
     "@easy-webpack/config-copy-files": "^1.1.2",
