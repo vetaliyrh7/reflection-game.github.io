@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title><%- htmlWebpackPlugin.options.metadata.title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="<%- htmlWebpackPlugin.options.metadata.baseUrl %>">
-    <!-- imported CSS are concatenated and added automatically -->
-  </head>
-  <body aurelia-app="main">
-    <% if (htmlWebpackPlugin.options.metadata.ENV === 'development') { %>
-    <!-- Webpack Dev Server reload -->
-    <script src="/webpack-dev-server.js"></script>
-    <% } %>
-  </body>
+<head>
+  <title>Reflection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <!-- imported CSS are concatenated and added automatically -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body aurelia-app="main">
+<div class="splash">
+  <div class="message">Aurelia Navigation Skeleton</div>
+  <i class="fa fa-spinner fa-spin"></i>
+</div>
+<!-- Uncomment below line for Webpack Dev Server auto reload -->
+<script src="/webpack-dev-server.js"></script>
+</body>
 </html>
