@@ -2,6 +2,10 @@ body {
   background-color: #F3F7FA !important;
 }
 
+.info-add {
+  margin-top: 1rem;
+}
+
 .main-container {
   margin-top: 4rem;
   padding: 0 13rem;

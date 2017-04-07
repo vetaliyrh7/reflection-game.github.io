@@ -1,3 +1,5 @@
+// TODO: Убрать самокопирование компонентов. В проекте много дубликатов
+
 export class App {
   configureRouter(config, router) {
     this.router = router;
