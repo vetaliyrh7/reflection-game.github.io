@@ -4,13 +4,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AureliaWebpackPlugin = require('aurelia-webpack-plugin');
 const project = require('./package.json');
 
+const outDir = path.resolve('public');
+
+const ENV = process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() || 'development';
+const DEBUG = ENV !== 'production';
+const metadata = {
+  port: process.env.WEBPACK_PORT || 9000,
+  host: process.env.WEBPACK_HOST || 'localhost',
+  ENV: ENV,
+  HMR: process.argv.join('').indexOf('hot') >= 0 || !!process.env.WEBPACK_HMR
+};
+
 module.exports = {
   entry: {
-    'app': [], // <-- this array will be filled by the aurelia-webpack-plugin
+    'app': ["./src/main"], // <-- this array will be filled by the aurelia-webpack-plugin
     'aurelia': Object.keys(project.dependencies).filter(dep => dep.startsWith('aurelia-'))
   },
   output: {
-    path: path.resolve('public'),
+    path: __dirname + "/public",
     filename: '[name].bundle.js'
   },
   module: {
