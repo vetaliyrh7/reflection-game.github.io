@@ -3,7 +3,10 @@
   <div class="card ${data.type}">
     <h4 class="card-title ${data.type}">
       ${data.title}
-      <span class="badge badge-default type-label">${data.typeLabel}</span>
+      <span class="badge badge-success type-label">${data.typeLabel}</span>
+      <a if.bind="data" route-href="route: edit; params.bind: { id: data.id }" class="badge badge-info edit-label">
+        <i class="material-icons">create</i>
+      </a>
       <span class="date">Создано: ${data.createdAt}</span>
     </h4>
     <div class="card-block">

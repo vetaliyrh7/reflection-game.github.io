@@ -15,10 +15,23 @@
   font-size: .8rem;
 }
 
-.card-title > .type-label {
+.card-title > .type-label,
+.card-title > .edit-label,
+.card-title > .remove-label {
   position: absolute;
-  right: 1.2rem;
   top: 1.2rem;
+}
+
+.card-title > .type-label {
+  right: 4rem;
+}
+
+.card-title > .edit-label {
+  right: 1.2rem;
+}
+
+.card-title > .edit-label > i {
+  font-size: 1rem;
 }
 
 .card-title.news > .type-label {

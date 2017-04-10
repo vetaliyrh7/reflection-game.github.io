@@ -8,20 +8,33 @@ export class App {
     config.map([
       { route: ['/', 'lore'],
         name: 'lore',
-        moduleId: './containers/lore-container/lore-container',
+        contentType: 'lore',
+        moduleId: './containers/data-container/data-container',
         nav: true,
         title: "Лор"},
       { route: ['/characters', 'characters'],
         name: 'characters',
-        moduleId: './containers/characters-container/characters-container',
+        contentType: 'characters',
+        moduleId: './containers/data-container/data-container',
         nav: true,
         title: "Персонажи"},
       {
         route: ['/items', 'items'],
         name: 'items',
-        moduleId: './containers/items-container/items-container',
+        contentType: 'items',
+        moduleId: './containers/data-container/data-container',
         nav: true,
-        title: "Предметы"}
+        title: "Предметы"},
+      {
+        route: '/create/:contentType',
+        name: 'create',
+        moduleId: './containers/edit-create-container/edit-container',
+        title: "Создать публикацию"},
+      {
+        route: '/edit/:id',
+        name: 'edit',
+        moduleId: './containers/edit-create-container/edit-container',
+        title: "Редактирование публикации"}
     ]);
   }
 }

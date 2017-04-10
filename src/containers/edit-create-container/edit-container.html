@@ -1,0 +1,43 @@
+<template>
+  <require from="../../components/card/card.html"></require>
+  <require from="./edit-container.css"></require>
+  <require from='tinymce/skins/lightgray/skin.min.css'></require>
+  <require from='tinymce/skins/lightgray/content.min.css'></require>
+
+  <div class="main-container">
+    <div class="row flexed">
+      <div class="card info-add">
+        <div class="card-header">
+          ${header}
+        </div>
+        <div class="card-block">
+          <div class="data-add">
+            <form>
+              <div class="form-group">
+                <label for="title">Оглавление</label>
+                <input value.bind="title" type="text" class="form-control" id="title" aria-describedby="emailHelp"
+                       placeholder="Введите тему"/>
+              </div>
+              <div class="form-group">
+                <label for="uniqueId">Контенет</label>
+                <textarea value.bind="content" class="form-control contentEdit" id.one-time="uniqueId" rows="5"></textarea>
+                <small id="emailHelp" class="form-text text-muted">В даной форме требуется воспользоваться
+                  html-разметкой
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="typeLabel">Метка</label>
+                <input value.bind="typeLabel" type="text" class="form-control" id="typeLabel"
+                       aria-describedby="emailHelp"
+                       placeholder="Введите название метки"/>
+              </div>
+              <button if.bind="!isEdit" type="submit" click.trigger="addInfo()" class="btn btn-success">Добавить пост</button>
+              <button if.bind="isEdit" type="submit" click.trigger="updateInfo()" class="btn btn-success">Обновить пост</button>
+              <button if.bind="isEdit" type="submit" click.trigger="removePost()" class="btn btn-danger">Удалить пост</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
