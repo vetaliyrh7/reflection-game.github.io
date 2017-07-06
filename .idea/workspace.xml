@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ca78eb1-0b84-4448-a522-969df671e2fc" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app.bundle.js" afterPath="$PROJECT_DIR$/public/app.bundle.js" />
+=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.css" afterPath="$PROJECT_DIR$/src/main.css" />
+>>>>>>> dfd8d4d0cab3c5ced9c4d2e8208cec97a73291fa
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +35,11 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="94">
+=======
             <state relative-caret-position="60">
+>>>>>>> dfd8d4d0cab3c5ced9c4d2e8208cec97a73291fa
               <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
@@ -902,7 +911,11 @@
       <workItem from="1491512602620" duration="5884000" />
       <workItem from="1491647345434" duration="394000" />
       <workItem from="1491688177888" duration="1360000" />
+<<<<<<< HEAD
+      <workItem from="1491842790540" duration="19198000" />
+=======
       <workItem from="1491842790540" duration="19008000" />
+>>>>>>> dfd8d4d0cab3c5ced9c4d2e8208cec97a73291fa
     </task>
     <task id="LOCAL-00001" summary="Добавил aurelia js фреймворк">
       <created>1491334056273</created>
@@ -957,7 +970,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="57313000" />
+=======
     <option name="totallyTimeSpent" value="57123000" />
+>>>>>>> dfd8d4d0cab3c5ced9c4d2e8208cec97a73291fa
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1399,7 +1416,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="94">
+=======
         <state relative-caret-position="60">
+>>>>>>> dfd8d4d0cab3c5ced9c4d2e8208cec97a73291fa
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>

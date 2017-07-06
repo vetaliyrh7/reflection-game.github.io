@@ -20,8 +20,10 @@ module.exports = {
     }
   },
   list(req, res) {
+    const sortDir = req.query.sortDir === 'asc' ? 'ASC' : 'DESC';
+    const fieldName = !!req.query.fieldName ? req.query.fieldName : 'createdAt';
     return Post
-      .all({ where: { type: req.query.type } })
+      .all({ where: { type: req.query.type }, order: [[fieldName, sortDir]] })
       .then(posts => res.status(200).send(posts))
       .catch(error => res.status(400).send(error));
   },
@@ -33,13 +35,14 @@ module.exports = {
   },
   remove(req, res) {
     return Post
-      .destroy({ where: { id: req.params.id }, individualHooks : true })
+      .findOne({ where: {id: req.params.id} })
       .then(record => {
        if(record) {
-         res.status(201)
+         record.destroy()
+         return res.status(201)
        }
        else {
-         res.status(404).json({message:"record not found"})
+         return res.status(404).json({message:"record not found"})
        }
       })
       .catch(error => res.status(400).send(error));
